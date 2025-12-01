@@ -134,6 +134,10 @@ cp .env.local.example .env.local
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Supabaseの匿名キー
 - `SUPABASE_SERVICE_ROLE_KEY`: Supabaseのサービスロールキー
 
+> [!IMPORTANT]
+> **Supabaseの認証設定**:
+> Supabaseダッシュボードの `Authentication > URL Configuration > Redirect URLs` に `https://social-ops-lime.vercel.app/auth/callback` を追加してください。これがないと、Google/Apple認証後のリダイレクトが失敗します。
+
 ### 4. Supabaseのセットアップ
 
 Supabaseプロジェクトを作成し、マイグレーションを実行:

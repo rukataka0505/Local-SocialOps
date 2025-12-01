@@ -10,7 +10,7 @@ export function SocialAuthButtons() {
 
     const handleSocialLogin = async (provider: 'google' | 'apple') => {
         const supabase = createClient();
-        const redirectTo = `${window.location.origin}/auth/callback?next=${next || '/dashboard'}`;
+        const redirectTo = `https://social-ops-lime.vercel.app/auth/callback?next=${next || '/dashboard'}`;
 
         await supabase.auth.signInWithOAuth({
             provider,
